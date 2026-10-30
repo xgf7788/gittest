@@ -21,3 +21,13 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
+
+
+def power(a, b):
+    """Return a raised to the power of b. Supports negative exponents."""
+    if b < 0:
+        return 1 / power(a, -b)
+    result = 1
+    for _ in range(b):
+        result *= a
+    return result
