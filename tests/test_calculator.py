@@ -26,7 +26,5 @@ def test_divide():
 
 
 def test_divide_by_zero():
-    # 这个测试目前会失败——divide() 还没有处理除零情况。
-    # 这就是我们要在 Issue #1 里修复的 bug。
     with pytest.raises(ValueError):
         divide(1, 0)
