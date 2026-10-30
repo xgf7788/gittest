@@ -24,7 +24,9 @@ def divide(a, b):
 
 
 def power(a, b):
-    """Return a raised to the power of b."""
+    """Return a raised to the power of b. Supports negative exponents."""
+    if b < 0:
+        return 1 / power(a, -b)
     result = 1
     for _ in range(b):
         result *= a
